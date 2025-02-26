@@ -120,30 +120,33 @@ footer {
 
 /* Add animation to sections when they come into view */
 #cat-eyes-container {
-  position: fixed;
+  position: fixed !important; /* Fixed positioning to keep out of document flow */
   top: 20px;
-  right: 20px;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
   width: 100px;
   height: 40px;
-  z-index: 100;
+  z-index: 1000; /* High z-index to stay above other content */
   display: flex;
   justify-content: space-between;
+  pointer-events: none; /* Allow clicks to pass through to elements below */
 }
 
 .eye {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #ffde7d;
+  background-color: #ffde7d; /* Yellow eye color */
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  pointer-events: auto; /* Allow clicking on the eyes themselves */
 }
 
 .pupil {
   width: 20px;
   height: 20px;
-  background-color: #000;
+  background-color: #000; /* Black pupil */
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -151,7 +154,7 @@ footer {
   transform: translate(-50%, -50%);
 }
 
-/* Add a cat-shaped border around the eyes */
+/* Cat face shape background */
 #cat-eyes-container::before {
   content: "";
   position: absolute;
@@ -159,7 +162,8 @@ footer {
   left: -15px;
   right: -15px;
   bottom: -15px;
-  background-color: rgba(0,0,0,0.1);
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  background-color: rgba(0,0,0,0.1); /* Light gray background */
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; /* Cat face shape */
   z-index: -1;
+  pointer-events: none; /* Allow clicks to pass through */
 }
