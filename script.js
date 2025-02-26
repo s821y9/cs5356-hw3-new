@@ -71,15 +71,4 @@ document.addEventListener('DOMContentLoaded', function() {
       eye.style.transform = `translate(calc(-50% + ${pupilX}px), calc(-50% + ${pupilY}px))`;
     });
   });
-  
-  // Add some interactivity when clicking on the eyes
-  container.addEventListener('click', function() {
-    // Make eyes blink
-    eyeContainers.forEach(eye => {
-      eye.style.height = '5px';
-      setTimeout(() => {
-        eye.style.height = '40px';
-      }, 150);
-    });
-  });
 });
