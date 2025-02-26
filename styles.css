@@ -123,11 +123,11 @@ section {
     animation: fadeIn 0.8s ease-out;
 }
 
-/* Add cat eyes for ec */
 #cat-eyes-container {
   position: fixed;
   top: 20px;
-  right: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100px;
   height: 40px;
   z-index: 100;
@@ -156,7 +156,6 @@ section {
   transform: translate(-50%, -50%);
 }
 
-/* Add a cat-shaped border around the eyes */
 #cat-eyes-container::before {
   content: "";
   position: absolute;
