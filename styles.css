@@ -102,3 +102,23 @@ footer {
     padding: 1rem 0;
     border-top: 1px solid #eee;
 }
+
+
+/* Custom animation property not covered in class */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    animation: fadeIn 1s ease-out; /* Apply the animation */
+}
+
+/* Add animation to sections when they come into view */
+section {
+    animation: fadeIn 0.8s ease-out;
+}
