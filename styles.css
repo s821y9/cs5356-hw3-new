@@ -119,6 +119,11 @@ footer {
 }
 
 /* Add animation to sections when they come into view */
+section {
+    animation: fadeIn 0.8s ease-out;
+}
+
+
 #cat-eyes-container {
   position: fixed !important; /* Fixed positioning to keep out of document flow */
   top: 20px;
