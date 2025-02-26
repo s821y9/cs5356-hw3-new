@@ -76,9 +76,9 @@ nav a {
 }
 
 /* Assignment notes section with CSS Grid */
-.notes-container  {
+.notes-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
     gap: 2rem;
     margin: 2rem 0;
 }
