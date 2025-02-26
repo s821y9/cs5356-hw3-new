@@ -122,3 +122,49 @@ footer {
 section {
     animation: fadeIn 0.8s ease-out;
 }
+
+/* Add cat eyes for ec */
+#cat-eyes-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: 40px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+}
+
+.eye {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffde7d;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.pupil {
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Add a cat-shaped border around the eyes */
+#cat-eyes-container::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  z-index: -1;
+}
